@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+VisualStudioVersion = 15.0.28010.2050
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "HouseShow", "HouseShow\HouseShow.csproj", "{BF9BA3AD-17E5-4317-87AE-70D6CBE42994}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HouseShow.Tests", "HouseShow.Tests\HouseShow.Tests.csproj", "{C20E4B8B-DCC0-46B6-A139-B06D7E377500}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{BF9BA3AD-17E5-4317-87AE-70D6CBE42994}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{BF9BA3AD-17E5-4317-87AE-70D6CBE42994}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{BF9BA3AD-17E5-4317-87AE-70D6CBE42994}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{BF9BA3AD-17E5-4317-87AE-70D6CBE42994}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C20E4B8B-DCC0-46B6-A139-B06D7E377500}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C20E4B8B-DCC0-46B6-A139-B06D7E377500}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C20E4B8B-DCC0-46B6-A139-B06D7E377500}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C20E4B8B-DCC0-46B6-A139-B06D7E377500}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {32D6846E-0880-490C-90D8-A95F2729F1A2}
+	EndGlobalSection
+EndGlobal

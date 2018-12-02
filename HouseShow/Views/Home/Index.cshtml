@@ -1,0 +1,41 @@
+﻿@model List<Show>
+@{
+	ViewData["Title"] = "Home";
+}
+<h1>House Show</h1>
+<h3>A Calendar of DIY Events</h3>
+@if (ViewBag.City != null)
+{
+<form method="post">
+	<label name="city">City</label>
+	<input name="city" /><br />
+	<label name="state">State</label>
+	<input name="state" /><br />
+</form>
+}
+else
+{
+	<h2>Upcoming Shows in @ViewBag.City</h2>
+	<table>
+		<thead>
+			<tr>
+				<th>Artists</th>
+				<th>Venue</th>
+				<th>Date</th>
+			</tr>
+		</thead>
+		<tbody>
+			@foreach (Show s in Model)
+			{
+				<tr>
+					<td>@s.ArtistNames</td>
+					<td>@s.Venue.Name</td>
+				</tr>
+			}
+		</tbody>
+	</table>
+}
+	<br />
+	<a href="~/sources/submitprintsource">Add a Print Source</a>
+	<a href="~/sources/submitwebsource">Add a Web Source</a>
+	<br />
