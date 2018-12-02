@@ -28,12 +28,6 @@ namespace HouseShow.Repositories
             shows.Add(show);
         }
 
-        public void AddUser(Show show, User user)
-        {
-            Show currentShow = shows.First<Show>(s => s.ShowID == show.ShowID);
-            currentShow.Users.Add(user);
-        }
-
         public List<Show> GetShowsByCity(string city, string state)
         {
             List<Show> selectedShows = (from s in shows
@@ -43,92 +37,108 @@ namespace HouseShow.Repositories
             return selectedShows;
         }
 
+        public List<Show> GetShowsByArtist(string artistName)
+        {
+            List<Show> selectedShows = (from s in shows
+                                        from a in s.Artists
+                                        where a.Name.ToLower() == artistName.ToLower()
+                                        select s).ToList();
+            return selectedShows;
+        }
+
+        public List<Show> GetShowsByVenue(string venueName)
+        {
+            List<Show> selectedShows = (from s in shows
+                                        where s.Venue.Name.ToLower() == venueName.ToLower()
+                                        select s).ToList();
+            return selectedShows;
+        }
+
         void AddTestData()
         {
-            User user = new User
+            Venue venue1 = new Venue
             {
-                Name = "User1",
-                Password = "12345",
+                Name = "Seedy Tavern",
+                Address = "1234 Cedar Dr.",
                 City = "Eugene",
-                State = "OR"
+                State = "OR",
+                Email = "seedyseed@seedmail.com"
             };
-            Artist artist = new Artist
+            Venue venue2 = new Venue
             {
-                Name = "Artist1",
-                Description = "this is a test",
-                City = "Eugene",
-                State = "OR"
+                Name = "Seed House",
+                Address = "12345 Cedar Dr.",
+                City = "Portland",
+                State = "OR",
+                Email = "seeeed@seedmail.com"
+            };
+            Show show1 = new Show
+            {
+                Venue = venue1,
+                Time = new DateTime(2018, 12, 12, 21, 0, 0),
+                Cost = 5.0m
+            };
+            Show show2 = new Show
+            {
+                Venue = venue1,
+                Time = new DateTime(2018, 12, 13, 21, 0, 0),
+                Cost = 5.0m
+            };
+            Show show3 = new Show
+            {
+                Venue = venue1,
+                Time = new DateTime(2018, 12, 14, 21, 0, 0),
+                Cost = 5.0m
+            };
+            Show show4 = new Show
+            {
+                Venue = venue2,
+                Time = new DateTime(2019, 1, 14, 21, 0, 0),
+                Cost = 5.0m
+            };
+            Artist artist1 = new Artist
+            {
+                Name = "The Seeds",
+                Description = "60s garage rock",
+                City = "Los Angeles",
+                State = "CA",
+                Email = "seedsband@seedmail.com"
             };
             Artist artist2 = new Artist
             {
-                Name = "Artist2",
-                Description = "this is a test",
-                City = "Eugene",
-                State = "OR"
+                Name = "The Bad Seeds",
+                Description = "Nick Cave's backing band",
+                City = "Melbourne",
+                State = "AU",
+                Email = "sadbeeds@seedmail.com"
             };
-            Venue venue = new Venue
+            Artist artist3 = new Artist
             {
-                Name = "Venue1",
-                Address = "1234 abc st.",
-                City = "Eugene",
-                State = "OR"
+                Name = "Seedy Dan",
+                Description = "Spooky soft rock",
+                City = "Dayton",
+                State = "OH",
+                Email = "dandandan@seedmail.com"
             };
-            Show show = new Show
+            Artist artist4 = new Artist
             {
-                Venue = venue,
-                Time = new DateTime(2019, 1, 1, 21, 0, 0),
-                Cost = 5.0m
+                Name = "Seeder",
+                City = "Dayton",
+                State = "OH",
+                Email = "seederthanthou@seedmail.com"
             };
-
-            show.Artists.Add(artist);
-            show.Artists.Add(artist2);
-            show.Users.Add(user);
-            shows.Add(show);
-
-            User user2 = new User
-            {
-                Name = "User1",
-                Password = "12345",
-                City = "Eugene",
-                State = "OR"
-            };
-            venue = new Venue
-            {
-                Name = "Venue2",
-                Address = "345 abc st.",
-                City = "Eugene",
-                State = "OR"
-            };
-            show = new Show
-            {
-                Venue = venue,
-                Time = new DateTime(2019, 1, 13, 20, 0, 0),
-                Cost = 0m
-            };
-
-            show.Artists.Add(artist);
-            show.Users.Add(user);
-            show.Users.Add(user2);
-            shows.Add(show);
-
-            venue = new Venue
-            {
-                Name = "Venue3",
-                Address = "345 abc st.",
-                City = "Portland",
-                State = "OR"
-            };
-            show = new Show
-            {
-                Venue = venue,
-                Time = new DateTime(2019, 1, 3, 20, 0, 0),
-                Cost = 0m
-            };
-
-            show.Artists.Add(artist);
-            show.Users.Add(user);
-            show.Users.Add(user2);
-            shows.Add(show);
+            show1.Artists.Add(artist1);
+            show1.Artists.Add(artist2);
+            show2.Artists.Add(artist1);
+            show3.Artists.Add(artist1);
+            show3.Artists.Add(artist2);
+            show3.Artists.Add(artist3);
+            show4.Artists.Add(artist4);
+            
+            shows.Add(show1);
+            shows.Add(show2);
+            shows.Add(show3);
+            shows.Add(show4);
         }
     }
 }

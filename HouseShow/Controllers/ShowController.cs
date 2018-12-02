@@ -12,7 +12,6 @@ namespace HouseShow.Controllers
     public class ShowController : Controller
     {
         IShowRepository repo;
-        User currentUser;
         public ShowController(IShowRepository r)
         {
             repo = r;
@@ -30,6 +29,18 @@ namespace HouseShow.Controllers
             List<Show> shows = repo.GetShowsByCity(city, state);
             SortShows(shows);
             return View(shows);
+        }
+
+        public IActionResult AddShow()
+        {
+            return View();
+        }
+
+        [HttpPost]
+        public IActionResult AddShow(Show show, string artistName)
+        {
+            repo.AddShow(show);
+            return View("ViewShow", show);
         }
 
         public void SortShows(List<Show> shows)

@@ -36,8 +36,6 @@ namespace HouseShow
 
             services.AddMvc().SetCompatibilityVersion(CompatibilityVersion.Version_2_1);
 
-            //services.AddTransient<IUserRepository, FakeUserRepository>();
-            services.AddTransient<IUserRepository, UserRepository>();
             //services.AddTransient<IShowRepository, FakeShowRepository>();
             services.AddTransient<IShowRepository, ShowRepository>();
 

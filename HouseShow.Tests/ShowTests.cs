@@ -17,14 +17,41 @@ namespace HouseShow.Tests
             var repo = new FakeShowRepository();
 
             // Act
-            List <Show> s1 = repo.GetShowsByCity("eugene", "or");
-            List<Show> s2 = repo.GetShowsByCity("PORTLAND", "OR");
+            List<Show> s1 = repo.GetShowsByCity("eugene", "or");
+            List<Show> s2 = repo.GetShowsByCity("portland", "or");
+
+            // Assert
+            Assert.Equal(3, s1.Count);
+            Assert.Single(s2);
+            Assert.Equal("Seedy Tavern", s1[0].Venue.Name);
+            Assert.Equal("Seed House", s2[0].Venue.Name);
+
+        }
+
+        [Fact]
+        public void TestGetShowsByArtist()
+        {
+            // Arrange
+            var repo = new FakeShowRepository();
+
+            // Act
+            List<Show> s1 = repo.GetShowsByArtist("The Bad Seeds");
 
             // Assert
             Assert.Equal(2, s1.Count);
-            Assert.Equal("Venue1", s1[0].Venue.Name);
-            Assert.Single(s2);
-            Assert.Equal("Venue3", s2[0].Venue.Name);
+        }
+
+        [Fact]
+        public void TestGetShowsByVenue()
+        {
+            // Arrange
+            var repo = new FakeShowRepository();
+
+            // Act
+            List<Show> s1 = repo.GetShowsByVenue("Seed House");
+
+            // Assert
+            Assert.Single(s1);
         }
 
         [Fact]
@@ -37,7 +64,7 @@ namespace HouseShow.Tests
             List<Show> s1 = repo.GetShowsByCity("eugene", "or");
 
             // Assert
-            Assert.Equal("Artist1, Artist2", s1[0].ArtistNames);
+            Assert.Equal("The Seeds, The Bad Seeds", s1[0].ArtistNames);
         }
     }
 }

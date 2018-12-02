@@ -1,0 +1,25 @@
+﻿@model Show;
+
+<script src="https://ajax.aspnetcdn.com/ajax/jQuery/jquery-2.2.0.min.js"></script>
+<script src="https://ajax.aspnetcdn.com/ajax/jquery.validate/1.16.0/jquery.validate.min.js"></script>
+<script src="https://ajax.aspnetcdn.com/ajax/jquery.validation.unobtrusive/3.2.6/jquery.validate.unobtrusive.min.js"></script>
+    
+<form method="post">
+	<div asp-validation-summary="ModelOnly" style="background-color: red"></div>
+	<label asp-for="Venue.Name">Venue Name</label>
+	<div><span asp-validation-for="Venue.Name"> </span></div>
+	<input asp-for="Venue.Name" /><br />
+
+	<label asp-for="Venue.City">City</label>
+	<div><span asp-validation-for="Venue.City"> </span></div>
+	<input asp-for="Venue.City" /><br />
+
+	<label asp-for="Time">Date and Time</label>
+	<div><span asp-validation-for="Time"> </span></div>
+	<input asp-for="Time" /><br />
+
+	<label input="artistName">Artist Name</label>
+	<input for="artistName" /><br />
+
+	<input type="submit" value="Enter" />
+</form>

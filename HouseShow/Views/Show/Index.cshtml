@@ -1,0 +1,49 @@
+﻿@model List<Show>
+@{
+	ViewData["Title"] = "Home";
+}
+<h1>House Show</h1>
+<h3>Search Shows</h3>
+
+<form method="post">
+	<label name="city">City:</label>
+	<input name="city" /><br />
+	<label name="state">State:</label>
+	<input name="state" /><br />
+	<input type="submit" />
+</form>
+<form method="post">
+	<label name="artist">Search by Artist</label>
+	<input name="artist" /><br />
+</form>
+<form method="post">
+	<label name="venue">Search by Venue</label>
+	<input name="venue" /><br />
+</form>
+<br />
+@if (Model != null)
+{
+	<table>
+		<thead>
+			<tr>
+				<th>Artists</th>
+				<th>Venue</th>
+				<th>City/State</th>
+				<th>Date</th>
+			</tr>
+		</thead>
+		<tbody>
+			@foreach (Show show in Model)
+			{
+				<tr>
+					<th>@show.ArtistNames</th>
+					<th>@show.Venue.Name</th>
+					<th>@show.Venue.City, @show.Venue.State</th>
+					<th>@show.Time</th>
+				</tr>
+			}
+		</tbody>
+	</table>
+}
+
+<a href="~/show/addshow">Post a Show</a>
