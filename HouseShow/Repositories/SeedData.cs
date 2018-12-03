@@ -25,6 +25,8 @@ namespace HouseShow.Repositories
                     State = "OR",
                     Email = "seedyseed@seedmail.com"
                 };
+                context.Venues.Add(venue1);
+
                 Venue venue2 = new Venue
                 {
                     Name = "Seed House",
@@ -33,6 +35,8 @@ namespace HouseShow.Repositories
                     State = "OR",
                     Email = "seeeed@seedmail.com"
                 };
+                context.Venues.Add(venue2);
+
                 Show show1 = new Show
                 {
                     Venue = venue1,
@@ -57,6 +61,7 @@ namespace HouseShow.Repositories
                     Time = new DateTime(2019, 1, 14, 21, 0, 0),
                     Cost = 5.0m
                 };
+
                 Artist artist1 = new Artist
                 {
                     Name = "The Seeds",
@@ -65,6 +70,8 @@ namespace HouseShow.Repositories
                     State = "CA",
                     Email = "seedsband@seedmail.com"
                 };
+                context.Artists.Add(artist1);
+
                 Artist artist2 = new Artist
                 {
                     Name = "The Bad Seeds",
@@ -73,6 +80,8 @@ namespace HouseShow.Repositories
                     State = "AU",
                     Email = "sadbeeds@seedmail.com"
                 };
+                context.Artists.Add(artist2);
+
                 Artist artist3 = new Artist
                 {
                     Name = "Seedy Dan",
@@ -81,6 +90,8 @@ namespace HouseShow.Repositories
                     State = "OH",
                     Email = "dandandan@seedmail.com"
                 };
+                context.Artists.Add(artist3);
+
                 Artist artist4 = new Artist
                 {
                     Name = "Seeder",
@@ -88,6 +99,8 @@ namespace HouseShow.Repositories
                     State = "OH",
                     Email = "seederthanthou@seedmail.com"
                 };
+                context.Artists.Add(artist4);
+
                 show1.Artists.Add(artist1);
                 show1.Artists.Add(artist2);
                 show2.Artists.Add(artist1);

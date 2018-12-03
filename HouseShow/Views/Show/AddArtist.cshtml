@@ -1,0 +1,40 @@
+﻿@model Artist;
+
+<script src="https://ajax.aspnetcdn.com/ajax/jQuery/jquery-2.2.0.min.js"></script>
+<script src="https://ajax.aspnetcdn.com/ajax/jquery.validate/1.16.0/jquery.validate.min.js"></script>
+<script src="https://ajax.aspnetcdn.com/ajax/jquery.validation.unobtrusive/3.2.6/jquery.validate.unobtrusive.min.js"></script>
+
+<form method="post">
+	<h3>Add Existing Artist</h3>
+	<label input="artistName">Artist Name</label>
+	<input for="artistName" /><br />
+	<input type="submit" value="Enter" />
+</form>
+
+<form method="post">
+	<h3>Add New Artist</h3>
+
+	<div asp-validation-summary="ModelOnly" style="background-color: red"></div>
+	<label asp-for="Name">Artist Name</label>
+	<div><span asp-validation-for="Name"> </span></div>
+	<input asp-for="Name" /><br />
+
+	<label asp-for="City">City</label>
+	<div><span asp-validation-for="City"> </span></div>
+	<input asp-for="City" /><br />
+
+	<label asp-for="State">State</label>
+	<div><span asp-validation-for="State"> </span></div>
+	<input asp-for="State" /><br />
+
+	<label asp-for="Email">Email</label>
+	<div><span asp-validation-for="Email"> </span></div>
+	<input asp-for="Email" /><br />
+
+	<label asp-for="Description">Description</label>
+	<div><span asp-validation-for="Description"> </span></div>
+	<input asp-for="Description" /><br />
+
+	<input type="submit" value="Enter" />
+	<a asp-action="DisplayShow" asp-route-showID="@ViewBag.ThisShow">Post Show</a>
+</form>

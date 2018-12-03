@@ -1,0 +1,17 @@
+﻿@model Show
+@{
+}
+
+<h3>Artists:</h3>
+@foreach (Artist a in Model.Artists)
+{
+	<p><a href="">@a.Name</a></p>
+}
+
+<h3>Venue:</h3>
+<p><a href="">@Model.Venue.Name</a></p>
+<p>@Model.Venue.Address</p>
+<p>@Model.Venue.City, @Model.Venue.State</p>
+
+<h3>Date/Time:</h3>
+<p>@Model.Time</p>

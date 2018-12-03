@@ -1,0 +1,38 @@
+﻿@model Venue;
+
+<script src="https://ajax.aspnetcdn.com/ajax/jQuery/jquery-2.2.0.min.js"></script>
+<script src="https://ajax.aspnetcdn.com/ajax/jquery.validate/1.16.0/jquery.validate.min.js"></script>
+<script src="https://ajax.aspnetcdn.com/ajax/jquery.validation.unobtrusive/3.2.6/jquery.validate.unobtrusive.min.js"></script>
+    
+<form method="post">
+	<h3>Add Existing Venue</h3>
+	<label input="venueName">Venue Name</label>
+	<input for="venueName" /><br />
+	<input type="submit" value="Enter" />
+</form>
+
+<form method="post">
+	<h3>Add New Venue</h3>
+	<div asp-validation-summary="ModelOnly" style="background-color: red"></div>
+	<label asp-for="Name">Venue Name</label>
+	<div><span asp-validation-for="Name"> </span></div>
+	<input asp-for="Name" /><br />
+
+	<label asp-for="City">City</label>
+	<div><span asp-validation-for="City"> </span></div>
+	<input asp-for="City" /><br />
+
+	<label asp-for="State">State</label>
+	<div><span asp-validation-for="State"> </span></div>
+	<input asp-for="State" /><br />
+
+	<label asp-for="Email">Email</label>
+	<div><span asp-validation-for="Email"> </span></div>
+	<input asp-for="Email" /><br />
+
+	<label asp-for="Website">Website Url</label>
+	<div><span asp-validation-for="Website"> </span></div>
+	<input asp-for="Website" /><br />
+
+	<input type="submit" value="Enter" />
+</form>

@@ -35,15 +35,16 @@
 		<tbody>
 			@foreach (Show show in Model)
 			{
-				<tr>
-					<th>@show.ArtistNames</th>
-					<th>@show.Venue.Name</th>
-					<th>@show.Venue.City, @show.Venue.State</th>
-					<th>@show.Time</th>
-				</tr>
+			<tr>
+				<th>@show.ArtistNames</th>
+				<th>@show.Venue.Name</th>
+				<th>@show.Venue.City, @show.Venue.State</th>
+				<th>@show.Time</th>
+				<th><a asp-action="DisplayShow" asp-route-showID="@show.ShowID.ToString()">more info</a></th>
+			</tr>
 			}
 		</tbody>
 	</table>
 }
 
-<a href="~/show/addshow">Post a Show</a>
+<a href="~/show/addvenue">Post a Show</a>

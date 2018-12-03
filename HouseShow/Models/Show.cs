@@ -24,19 +24,27 @@ namespace HouseShow.Models
         [StringLength(300, MinimumLength = 5)]
         public string Description { get; set; }
 
-        public ICollection<Artist> Artists => artists;
         public string ArtistNames
         {
             get
             {
                 string names = "";
-                foreach (Artist a in artists)
+                if (artists.Count > 1)
                 {
-                    string name = !(a == artists.Last()) ? a.Name + ", " : a.Name;
-                    names += name;
+                    foreach (Artist a in artists)
+                    {
+                        string name = !(a == artists.Last()) ? a.Name + ", " : a.Name;
+                        names += name;
+                    }
+                }
+                else if (artists.Count == 1)
+                {
+                    names = artists[0].Name;
                 }
                 return names;
             }
         }
+
+        public ICollection<Artist> Artists => artists;
     }
 }

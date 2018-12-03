@@ -27,7 +27,15 @@ namespace HouseShow.Repositories
             show.ShowID = shows.Count();
             shows.Add(show);
         }
+        public Show GetShow(string showID)
+        {
+            Show show = (from s in shows
+                         where s.ShowID.ToString() == showID
+                         select s).First();
+            return show;
+        }
 
+        /*
         public List<Show> GetShowsByCity(string city, string state)
         {
             List<Show> selectedShows = (from s in shows
@@ -53,7 +61,7 @@ namespace HouseShow.Repositories
                                         select s).ToList();
             return selectedShows;
         }
-
+        */
         void AddTestData()
         {
             Venue venue1 = new Venue

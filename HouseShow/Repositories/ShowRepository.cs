@@ -22,20 +22,28 @@ namespace HouseShow.Repositories
         {
             context = appDbContext;
         }
-
+        /*
         public void AddArtist(Show show, Artist artist)
         {
             show.Artists.Add(artist);
             context.Shows.Update(show);
             context.SaveChanges();
         }
-
+        */
         public void AddShow(Show show)
         {
             context.Shows.Add(show);
             context.SaveChanges();
         }
 
+        public Show GetShow(string showID)
+        {
+            Show show = (from s in context.Shows
+                         where s.ShowID.ToString() == showID
+                         select s).First();
+            return show;
+        }
+        /*
         public List<Show> GetShowsByCity(string city, string state)
         {
             List<Show> selectedShows = (from s in context.Shows
@@ -61,5 +69,6 @@ namespace HouseShow.Repositories
                                         select s).ToList();
             return selectedShows;
         }
+        */
     }
 }
