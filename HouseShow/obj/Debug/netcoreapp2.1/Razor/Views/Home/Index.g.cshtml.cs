@@ -54,7 +54,7 @@ using HouseShow.Models;
             WriteLiteral("<h1>House Show</h1>\r\n<h3>A Calendar of DIY Events</h3>\r\n\r\n<br />\r\n");
             EndContext();
             BeginContext(66, 33, false);
-            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "0a980e9f6a6643fb82e5a534744fd2b3", async() => {
+            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "9bf0ff683295429cb1c454bc30cde2ec", async() => {
                 BeginContext(83, 12, true);
                 WriteLiteral("Search Shows");
                 EndContext();

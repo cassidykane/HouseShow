@@ -30,6 +30,7 @@
 				<th>Venue</th>
 				<th>City/State</th>
 				<th>Date</th>
+				<th></th>
 			</tr>
 		</thead>
 		<tbody>
@@ -40,6 +41,7 @@
 					<th>@show.Venue.Name</th>
 					<th>@show.Venue.City, @show.Venue.State</th>
 					<th>@show.Time</th>
+					<th><a asp-action="DisplayShow" asp-route-showID="@show.ShowID.ToString()">more info</a></th>
 				</tr>
 			}
 		</tbody>

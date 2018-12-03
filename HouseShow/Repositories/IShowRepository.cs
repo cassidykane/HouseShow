@@ -11,9 +11,11 @@ namespace HouseShow.Repositories
         IQueryable<Show> Shows { get; }
 
         void AddShow(Show show);
-        void AddArtist(Show show, Artist artist);
+        //void AddArtist(Show show, Artist artist);
+        /*
         List<Show> GetShowsByCity(string city, string state);
         List<Show> GetShowsByArtist(string artistName);
         List<Show> GetShowsByVenue(string venueName);
+        */
     }
 }

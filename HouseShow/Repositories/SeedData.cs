@@ -25,6 +25,8 @@ namespace HouseShow.Repositories
                     State = "OR",
                     Email = "seedyseed@seedmail.com"
                 };
+                context.Venues.Add(venue1);
+
                 Venue venue2 = new Venue
                 {
                     Name = "Seed House",
@@ -33,73 +35,48 @@ namespace HouseShow.Repositories
                     State = "OR",
                     Email = "seeeed@seedmail.com"
                 };
+                context.Venues.Add(venue2);
+
                 Show show1 = new Show
                 {
                     Venue = venue1,
                     Time = new DateTime(2018, 12, 12, 21, 0, 0),
                     Cost = 5.0m
                 };
+                show1.Artists.Add("The Seeds");
+                show1.Artists.Add("The Bad Seeds");
+                context.Shows.Add(show1);
+
                 Show show2 = new Show
                 {
                     Venue = venue1,
                     Time = new DateTime(2018, 12, 13, 21, 0, 0),
                     Cost = 5.0m
                 };
+                show2.Artists.Add("The Seeds");
+                show2.Artists.Add("The Bad Seeds");
+                context.Shows.Add(show2);
+
                 Show show3 = new Show
                 {
                     Venue = venue1,
                     Time = new DateTime(2018, 12, 14, 21, 0, 0),
                     Cost = 5.0m
                 };
+                show3.Artists.Add("The Seeds");
+                show3.Artists.Add("The Bad Seeds");
+                show3.Artists.Add("Seedy Dan");
+                context.Shows.Add(show3);
+
                 Show show4 = new Show
                 {
                     Venue = venue2,
                     Time = new DateTime(2019, 1, 14, 21, 0, 0),
                     Cost = 5.0m
                 };
-                Artist artist1 = new Artist
-                {
-                    Name = "The Seeds",
-                    Description = "60s garage rock",
-                    City = "Los Angeles",
-                    State = "CA",
-                    Email = "seedsband@seedmail.com"
-                };
-                Artist artist2 = new Artist
-                {
-                    Name = "The Bad Seeds",
-                    Description = "Nick Cave's backing band",
-                    City = "Melbourne",
-                    State = "AU",
-                    Email = "sadbeeds@seedmail.com"
-                };
-                Artist artist3 = new Artist
-                {
-                    Name = "Seedy Dan",
-                    Description = "Spooky soft rock",
-                    City = "Dayton",
-                    State = "OH",
-                    Email = "dandandan@seedmail.com"
-                };
-                Artist artist4 = new Artist
-                {
-                    Name = "Seeder",
-                    City = "Dayton",
-                    State = "OH",
-                    Email = "seederthanthou@seedmail.com"
-                };
-                show1.Artists.Add(artist1);
-                show1.Artists.Add(artist2);
-                show2.Artists.Add(artist1);
-                show3.Artists.Add(artist1);
-                show3.Artists.Add(artist2);
-                show3.Artists.Add(artist3);
-                show4.Artists.Add(artist4);
-
-                context.Shows.Add(show1);
-                context.Shows.Add(show2);
-                context.Shows.Add(show3);
+                show4.Artists.Add("Seeder");
                 context.Shows.Add(show4);
+
                 context.SaveChanges();
             }
         }

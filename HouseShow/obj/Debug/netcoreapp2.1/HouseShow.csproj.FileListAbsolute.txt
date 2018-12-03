@@ -29,3 +29,4 @@ C:\Users\sleeper\Desktop\CS 295N ASP.NET\repos\TermProject\HouseShow\HouseShow\o
 C:\Users\sleeper\Desktop\CS 295N ASP.NET\repos\TermProject\HouseShow\HouseShow\obj\Debug\netcoreapp2.1\HouseShow.csproj.CopyComplete
 C:\Users\sleeper\Desktop\CS 295N ASP.NET\repos\TermProject\HouseShow\HouseShow\obj\Debug\netcoreapp2.1\Razor\Views\Show\Index.g.cshtml.cs
 C:\Users\sleeper\Desktop\CS 295N ASP.NET\repos\TermProject\HouseShow\HouseShow\obj\Debug\netcoreapp2.1\Razor\Views\Show\AddShow.g.cshtml.cs
+C:\Users\sleeper\Desktop\CS 295N ASP.NET\repos\TermProject\HouseShow\HouseShow\obj\Debug\netcoreapp2.1\Razor\Views\Show\DisplayShow.g.cshtml.cs

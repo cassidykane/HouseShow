@@ -9,7 +9,7 @@ namespace HouseShow.Models
     public class Show
     {
         public int ShowID { get; set; }
-        private List<Artist> artists = new List<Artist>();
+        private List<string> artists = new List<string>();
 
         //[Required(ErrorMessage = "Enter a venue")]
         public Venue Venue { get; set; }
@@ -24,19 +24,20 @@ namespace HouseShow.Models
         [StringLength(300, MinimumLength = 5)]
         public string Description { get; set; }
 
-        public ICollection<Artist> Artists => artists;
         public string ArtistNames
         {
             get
             {
                 string names = "";
-                foreach (Artist a in artists)
+                foreach (string a in artists)
                 {
-                    string name = !(a == artists.Last()) ? a.Name + ", " : a.Name;
+                    string name = !(a == artists.Last()) ? a + ", " : a;
                     names += name;
                 }
                 return names;
             }
         }
+
+        public ICollection<string> Artists => artists;
     }
 }

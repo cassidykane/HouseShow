@@ -15,19 +15,19 @@ namespace HouseShow.Repositories
         {
             AddTestData();
         }
-
+        /*
         public void AddArtist(Show show, Artist artist)
         {
             Show currentShow = shows.First<Show>(s => s.ShowID == show.ShowID);
-            currentShow.Artists.Add(artist);
+            currentShow.ArtistNames.Add(artist.Name);
         }
-
+        */
         public void AddShow(Show show)
         {
             show.ShowID = shows.Count();
             shows.Add(show);
         }
-
+        /*
         public List<Show> GetShowsByCity(string city, string state)
         {
             List<Show> selectedShows = (from s in shows
@@ -53,7 +53,7 @@ namespace HouseShow.Repositories
                                         select s).ToList();
             return selectedShows;
         }
-
+        */
         void AddTestData()
         {
             Venue venue1 = new Venue
@@ -64,6 +64,7 @@ namespace HouseShow.Repositories
                 State = "OR",
                 Email = "seedyseed@seedmail.com"
             };
+
             Venue venue2 = new Venue
             {
                 Name = "Seed House",
@@ -72,72 +73,45 @@ namespace HouseShow.Repositories
                 State = "OR",
                 Email = "seeeed@seedmail.com"
             };
+
             Show show1 = new Show
             {
                 Venue = venue1,
                 Time = new DateTime(2018, 12, 12, 21, 0, 0),
                 Cost = 5.0m
             };
+            show1.Artists.Add("The Seeds");
+            show1.Artists.Add("The Bad Seeds");
+            shows.Add(show1);
+
             Show show2 = new Show
             {
                 Venue = venue1,
                 Time = new DateTime(2018, 12, 13, 21, 0, 0),
                 Cost = 5.0m
             };
+            show2.Artists.Add("The Seeds");
+            show2.Artists.Add("The Bad Seeds");
+            shows.Add(show2);
+
             Show show3 = new Show
             {
                 Venue = venue1,
                 Time = new DateTime(2018, 12, 14, 21, 0, 0),
                 Cost = 5.0m
             };
+            show3.Artists.Add("The Seeds");
+            show3.Artists.Add("The Bad Seeds");
+            show3.Artists.Add("Seedy Dan");
+            shows.Add(show3);
+
             Show show4 = new Show
             {
                 Venue = venue2,
                 Time = new DateTime(2019, 1, 14, 21, 0, 0),
                 Cost = 5.0m
             };
-            Artist artist1 = new Artist
-            {
-                Name = "The Seeds",
-                Description = "60s garage rock",
-                City = "Los Angeles",
-                State = "CA",
-                Email = "seedsband@seedmail.com"
-            };
-            Artist artist2 = new Artist
-            {
-                Name = "The Bad Seeds",
-                Description = "Nick Cave's backing band",
-                City = "Melbourne",
-                State = "AU",
-                Email = "sadbeeds@seedmail.com"
-            };
-            Artist artist3 = new Artist
-            {
-                Name = "Seedy Dan",
-                Description = "Spooky soft rock",
-                City = "Dayton",
-                State = "OH",
-                Email = "dandandan@seedmail.com"
-            };
-            Artist artist4 = new Artist
-            {
-                Name = "Seeder",
-                City = "Dayton",
-                State = "OH",
-                Email = "seederthanthou@seedmail.com"
-            };
-            show1.Artists.Add(artist1);
-            show1.Artists.Add(artist2);
-            show2.Artists.Add(artist1);
-            show3.Artists.Add(artist1);
-            show3.Artists.Add(artist2);
-            show3.Artists.Add(artist3);
-            show4.Artists.Add(artist4);
-            
-            shows.Add(show1);
-            shows.Add(show2);
-            shows.Add(show3);
+            show4.Artists.Add("Seeder");
             shows.Add(show4);
         }
     }

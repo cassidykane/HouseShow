@@ -19,14 +19,18 @@ namespace HouseShow.Controllers
 
         public IActionResult Index()
         {
+            //List<Show> shows = repo.Shows.ToList();
             return View();
         }
 
         [HttpPost]
         public IActionResult Index(string city, string state)
         {
-            ViewBag.City = city;
-            List<Show> shows = repo.GetShowsByCity(city, state);
+            //ViewBag.City = city;
+            List<Show> shows = (from s in repo.Shows
+                                where s.Venue.City.ToLower() == city.ToLower() &&
+                                s.Venue.State.ToLower() == state.ToLower()
+                                select s).ToList();
             SortShows(shows);
             return View(shows);
         }
@@ -34,6 +38,14 @@ namespace HouseShow.Controllers
         public IActionResult AddShow()
         {
             return View();
+        }
+
+        public ViewResult DisplayShow(string showID)
+        {
+            Show show = (from s in repo.Shows
+                         where s.ShowID.ToString() == showID
+                         select s).First();
+            return View(show);
         }
 
         [HttpPost]
