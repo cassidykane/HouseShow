@@ -1,0 +1,23 @@
+﻿@model Show;
+
+<script src="https://ajax.aspnetcdn.com/ajax/jQuery/jquery-2.2.0.min.js"></script>
+<script src="https://ajax.aspnetcdn.com/ajax/jquery.validate/1.16.0/jquery.validate.min.js"></script>
+<script src="https://ajax.aspnetcdn.com/ajax/jquery.validation.unobtrusive/3.2.6/jquery.validate.unobtrusive.min.js"></script>
+
+<form method="post" asp-action="AddVenue">
+	<h3>Show Details</h3>
+	<div asp-validation-summary="ModelOnly" style="background-color: red"></div>
+	<label asp-for="Time">Date and Time</label>
+	<div><span asp-validation-for="Time"> </span></div>
+	<input asp-for="Time" type="datetime-local" value="@DateTime.Now.ToString("yyyy-MM-dd HH:mm:ss").Replace(' ','T')" /><br />
+
+	<label asp-for="Cost">Cost</label>
+	<div><span asp-validation-for="Cost"> </span></div>
+	<input asp-for="Cost" /><br />
+
+	<label asp-for="Description">Details</label>
+	<div><span asp-validation-for="Description"> </span></div>
+	<input asp-for="Description" /><br />
+
+	<input type="submit" value="Add a Venue" />
+</form>

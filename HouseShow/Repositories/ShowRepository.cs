@@ -21,18 +21,24 @@ namespace HouseShow.Repositories
         public ShowRepository(AppDbContext appDbContext)
         {
             context = appDbContext;
-        }
-        /*
-        public void AddArtist(Show show, Artist artist)
-        {
-            show.Artists.Add(artist);
-            context.Shows.Update(show);
-            context.SaveChanges();
-        }
-        */
+        } 
+
         public void AddShow(Show show)
         {
             context.Shows.Add(show);
+            context.SaveChanges();
+        }
+        public void AddArtist(Show show, Artist artist)
+        {
+            show.Artists.Add(artist);
+            //artist.ShowIDs.Add(show.ShowID);
+            context.Shows.Update(show);
+            context.SaveChanges();
+        }
+        public void AddVenue(Show show, Venue venue)
+        {
+            show.Venue = venue;
+            context.Shows.Update(show);
             context.SaveChanges();
         }
 
@@ -43,31 +49,54 @@ namespace HouseShow.Repositories
                          select s).First();
             return show;
         }
+        public string GetArtistNames(Show show)
+        {
+            List<Artist> artists = (from s in context.Shows
+                                    from a in s.Artists
+                                    from id in a.ShowIDs
+                                    where id == s.ShowID
+                                    select a).ToList();
+            string names = "";
+            if (artists.Count > 1)
+            {
+                foreach (Artist a in artists)
+                {
+                    string name = !(a == artists.Last()) ? a.Name + ", " : a.Name;
+                    names += name;
+                }
+            }
+            else if (artists.Count == 1)
+            {
+                names = artists[0].Name;
+            }
+            return names;
+        }
         /*
-        public List<Show> GetShowsByCity(string city, string state)
+        public void SetArtistNames()
         {
-            List<Show> selectedShows = (from s in context.Shows
-                                        where s.Venue.City.ToLower() == city.ToLower() &&
-                                        s.Venue.State.ToLower() == state.ToLower()
-                                        select s).ToList();
-            return selectedShows;
-        }
-
-        public List<Show> GetShowsByArtist(string artistName)
-        {
-            List<Show> selectedShows = (from s in context.Shows
-                                        from a in s.Artists
-                                        where a.Name.ToLower() == artistName.ToLower() 
-                                        select s).ToList();
-            return selectedShows;
-        }
-
-        public List<Show> GetShowsByVenue(string venueName)
-        {
-            List<Show> selectedShows = (from s in context.Shows
-                                        where s.Venue.Name.ToLower() == venueName.ToLower()
-                                        select s).ToList();
-            return selectedShows;
+            foreach (Show s in context.Shows)
+            {
+                if (s.Artists == null)
+                {
+                    List<Artist> artists = GetArtists(s);
+                    string names = "";
+                    if (artists.Count > 1)
+                    {
+                        foreach (Artist a in artists)
+                        {
+                            string name = !(a == artists.Last()) ? a.Name + ", " : a.Name;
+                            names += name;
+                        }
+                    }
+                    else if (artists.Count == 1)
+                    {
+                        names = artists[0].Name;
+                    }
+                    s.ArtistNames = names;
+                    context.Shows.Update(s);
+                }
+                context.SaveChanges();
+            }
         }
         */
     }

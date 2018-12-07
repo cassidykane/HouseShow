@@ -1,0 +1,20 @@
+﻿@model List<Artist>
+@{
+	ViewData["Title"] = "Artists";
+}
+
+<form method="post">
+	<label name="city">City:</label>
+	<input name="city" /><br />
+	<label name="state">State:</label>
+	<input name="state" /><br />
+	<input type="submit" />
+</form>
+
+@if (Model != null)
+{
+	@foreach (Artist a in Model)
+	{
+		<p><a asp-action="DisplayArtist" asp-route-artist="@a.Name">@a.Name</a></p>
+	}
+}

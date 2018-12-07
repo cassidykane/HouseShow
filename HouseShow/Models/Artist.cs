@@ -10,7 +10,7 @@ namespace HouseShow.Models
     {
         public int ArtistID { get; set; }
 
-        //private List<string> links = new List<string>();
+        private List<int> showIDs = new List<int>();
         //private List<Show> shows = new List<Show>();
 
         [StringLength(50, MinimumLength = 5)]
@@ -32,7 +32,7 @@ namespace HouseShow.Models
         //[Required(ErrorMessage = "Add an email address")]
         public string Email { get; set; }
 
-        //public ICollection<string> Links => links;
+        public ICollection<int> ShowIDs => showIDs;
         //public ICollection<Show> Shows => shows;
     }
 }

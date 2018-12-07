@@ -1,0 +1,20 @@
+﻿@model List<Venue>
+@{
+	ViewData["Title"] = "Venues";
+}
+
+<form method="post">
+	<label name="city">City:</label>
+	<input name="city" /><br />
+	<label name="state">State:</label>
+	<input name="state" /><br />
+	<input type="submit" />
+</form>
+
+@if (Model != null)
+{
+	@foreach (Venue v in Model)
+	{
+		<p><a asp-action="DisplayVenue" asp-route-venue="@v.Name">@v.Name</a></p>
+	}
+}

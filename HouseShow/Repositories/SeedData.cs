@@ -100,7 +100,15 @@ namespace HouseShow.Repositories
                     Email = "seederthanthou@seedmail.com"
                 };
                 context.Artists.Add(artist4);
-
+                
+                artist1.ShowIDs.Add(show1.ShowID);
+                artist1.ShowIDs.Add(show2.ShowID);
+                artist1.ShowIDs.Add(show3.ShowID);
+                artist2.ShowIDs.Add(show1.ShowID);
+                artist2.ShowIDs.Add(show3.ShowID);
+                artist3.ShowIDs.Add(show3.ShowID);
+                artist4.ShowIDs.Add(show4.ShowID);
+                
                 show1.Artists.Add(artist1);
                 show1.Artists.Add(artist2);
                 show2.Artists.Add(artist1);

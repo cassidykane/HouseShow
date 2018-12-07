@@ -35,6 +35,6 @@
 	<div><span asp-validation-for="Description"> </span></div>
 	<input asp-for="Description" /><br />
 
-	<input type="submit" value="Enter" />
-	<a asp-action="DisplayShow" asp-route-showID="@ViewBag.ThisShow">Post Show</a>
+	<input type="submit" value="Enter" /> <br />
 </form>
+<a asp-action="DisplayShow" asp-route-showID="@ViewBag.ShowID">Post Show</a>

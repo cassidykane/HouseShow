@@ -2,6 +2,7 @@
 
   <PropertyGroup>
     <TargetFramework>netcoreapp2.1</TargetFramework>
+    <UserSecretsId>164bddbf-d126-42f3-bec4-021662e95ce5</UserSecretsId>
   </PropertyGroup>
 
   <ItemGroup>
@@ -10,6 +11,12 @@
   </ItemGroup>
 
   <ItemGroup>
+    <Content Update="Views\Show\DisplayVenues.cshtml">
+      <Pack>$(IncludeRazorContentInPack)</Pack>
+    </Content>
+    <Content Update="Views\Show\DisplayVenue.cshtml">
+      <Pack>$(IncludeRazorContentInPack)</Pack>
+    </Content>
     <Content Update="Views\Show\Index.cshtml">
       <Pack>$(IncludeRazorContentInPack)</Pack>
     </Content>

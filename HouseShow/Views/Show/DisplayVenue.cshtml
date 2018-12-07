@@ -1,0 +1,42 @@
+﻿@model List<Show>;
+
+<h3>@ViewBag.Venue.Name</h3>
+<p>City: @ViewBag.Venue.Address</p>
+<p>City: @ViewBag.Venue.City</p>
+<p>State: @ViewBag.Venue.State</p>
+@if (ViewBag.Venue.Website != null)
+{
+	<p>@ViewBag.Venue.Website</p>
+}
+@if (ViewBag.Venue.Email != null)
+{
+	<p>Contact: @ViewBag.Venue.Email</p>
+}
+@if (Model != null)
+{
+	<table>
+		<thead>
+			<tr>
+				<th>Upcoming Shows</th>
+			</tr>
+			<tr>
+				<th>Artists</th>
+				<th>Venue</th>
+				<th>City/State</th>
+				<th>Date</th>
+			</tr>
+		</thead>
+		<tbody>
+			@foreach (Show show in Model)
+			{
+				<tr>
+					<th>@show.ArtistNames</th>
+					<th>@show.Venue.Name</th>
+					<th>@show.Venue.City, @show.Venue.State</th>
+					<th>@show.Time</th>
+					<th><a asp-action="DisplayShow" asp-route-showID="@show.ShowID.ToString()">more info</a></th>
+				</tr>
+			}
+		</tbody>
+	</table>
+}

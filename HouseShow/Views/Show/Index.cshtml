@@ -12,19 +12,14 @@
 	<input name="state" /><br />
 	<input type="submit" />
 </form>
-<form method="post">
-	<label name="artist">Search by Artist</label>
-	<input name="artist" /><br />
-</form>
-<form method="post">
-	<label name="venue">Search by Venue</label>
-	<input name="venue" /><br />
-</form>
 <br />
 @if (Model != null)
 {
 	<table>
 		<thead>
+			<tr>
+				<th>Upcoming Shows in @Model[0].Venue.City</th>
+			</tr>
 			<tr>
 				<th>Artists</th>
 				<th>Venue</th>
@@ -36,7 +31,14 @@
 			@foreach (Show show in Model)
 			{
 			<tr>
-				<th>@show.ArtistNames</th>
+				@if (show.ArtistNames.Length < 1)
+				{
+					<th>@ViewBag.Names[show.ShowID]</th>
+				}
+				@if (show.ArtistNames.Length > 1) 
+				{
+					<th>@show.ArtistNames</th>
+				}
 				<th>@show.Venue.Name</th>
 				<th>@show.Venue.City, @show.Venue.State</th>
 				<th>@show.Time</th>
@@ -47,4 +49,4 @@
 	</table>
 }
 
-<a href="~/show/addvenue">Post a Show</a>
+<a href="~/show/addshow">Post a Show</a>

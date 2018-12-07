@@ -16,6 +16,11 @@ namespace HouseShow.Repositories
             AddTestData();
         }
 
+        public void AddVenue(Show show, Venue venue)
+        {
+            Show currentShow = shows.First<Show>(s => s.ShowID == show.ShowID);
+            currentShow.Venue = venue;
+        }
         public void AddArtist(Show show, Artist artist)
         {
             Show currentShow = shows.First<Show>(s => s.ShowID == show.ShowID);
@@ -147,6 +152,11 @@ namespace HouseShow.Repositories
             shows.Add(show2);
             shows.Add(show3);
             shows.Add(show4);
+        }
+
+        public string GetArtistNames(Show show)
+        {
+            throw new NotImplementedException();
         }
     }
 }
