@@ -1,6 +1,6 @@
 ﻿@model List<Show>
 @{
-	ViewData["Title"] = "Home";
+	ViewData["Title"] = "Upcoming Shows";
 }
 <h1>House Show</h1>
 <h3>Search Shows</h3>
@@ -35,7 +35,7 @@
 				{
 					<th>@ViewBag.Names[show.ShowID]</th>
 				}
-				@if (show.ArtistNames.Length > 1) 
+				@if (show.ArtistNames.Length > 1)
 				{
 					<th>@show.ArtistNames</th>
 				}
@@ -48,5 +48,3 @@
 		</tbody>
 	</table>
 }
-
-<a href="~/show/addshow">Post a Show</a>

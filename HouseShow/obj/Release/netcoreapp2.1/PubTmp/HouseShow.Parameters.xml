@@ -3,7 +3,4 @@
   <parameter name="IIS Web Application Name" description="" value="HouseShow" tags="IisApp">
     <parameterEntry kind="ProviderPath" scope="IisApp" match="^C:\\Users\\sleeper\\Desktop\\CS\ 295N\ ASP\.NET\\repos\\TermProject\\HouseShow\\HouseShow\\obj\\Release\\netcoreapp2\.1\\PubTmp\\Out\\$" />
   </parameter>
-  <parameter name="HouseShow.Repositories.AppDbContext" description="" value="Server=tcp:houseshow.database.windows.net,1433;Initial Catalog=HouseShow;Persist Security Info=False;User ID=Cassidy;Password=Applepie89;MultipleActiveResultSets=False;Encrypt=True;TrustServerCertificate=False;Connection Timeout=30;" tags="dbfullsql">
-    <parameterEntry kind="ProviderPath" scope="dbfullsql" match="^C:\\Users\\sleeper\\Desktop\\CS\ 295N\ ASP\.NET\\repos\\TermProject\\HouseShow\\HouseShow\\obj\\Release\\netcoreapp2\.1\\PubTmp\\EFSQLScripts\\HouseShow\.Repositories\.AppDbContext\.sql$" />
-  </parameter>
 </parameters>

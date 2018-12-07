@@ -63,7 +63,7 @@ using HouseShow.Models;
             WriteLiteral("\r\n");
             EndContext();
             BeginContext(63, 188, false);
-            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("form", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "bdfb8c0582f3411fa2773e20b17ff65c", async() => {
+            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("form", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "dcdf1235b3834b8396486950c9a96a69", async() => {
                 BeginContext(83, 161, true);
                 WriteLiteral("\r\n\t<label name=\"city\">City:</label>\r\n\t<input name=\"city\" /><br />\r\n\t<label name=\"state\">State:</label>\r\n\t<input name=\"state\" /><br />\r\n\t<input type=\"submit\" />\r\n");
                 EndContext();
@@ -103,7 +103,7 @@ using HouseShow.Models;
             WriteLiteral("\t\t<p>");
             EndContext();
             BeginContext(319, 68, false);
-            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "e7e56a8f20664dfcb4bd74d72abc71f7", async() => {
+            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "2e11ce91549341a5ab78683a216a41f4", async() => {
                 BeginContext(377, 6, false);
 #line 18 "C:\Users\sleeper\Desktop\CS 295N ASP.NET\repos\TermProject\HouseShow\HouseShow\Views\Show\DisplayArtists.cshtml"
                                                                Write(a.Name);

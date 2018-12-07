@@ -200,7 +200,7 @@ Write(ViewBag.Artist.Name);
             WriteLiteral("</th>\r\n\t\t\t\t\t<th>");
             EndContext();
             BeginContext(720, 84, false);
-            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "6e7cc60e4e1244748cacbed17385cacd", async() => {
+            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "e2d08b0ad0574b13be8f3190205980c4", async() => {
                 BeginContext(791, 9, true);
                 WriteLiteral("more info");
                 EndContext();

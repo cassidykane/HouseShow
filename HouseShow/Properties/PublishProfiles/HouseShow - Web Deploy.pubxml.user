@@ -8,9 +8,4 @@ by editing this MSBuild file. In order to learn more about this please visit htt
     <TimeStampOfAssociatedLegacyPublishXmlFile />
     <EncryptedPassword>AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAAw+HUsBn660qHMp29WikgGwAAAAACAAAAAAAQZgAAAAEAACAAAAAzN82BOt0+6sTi8sldYV0nxxFeIutXYfiwFjcae2AHVwAAAAAOgAAAAAIAACAAAABu5uqNmCfGnZ35lPksY1saTaJZK2dJpiIhRdZIMEvcAIAAAADt/lLJF9p4Mu1hjz5xHez6omcXFgLtCeXzktIvRAbgX88N23mFFEbj6nwZnW8B4HBhxhMp2XgxYinVjapXQpzzcfuwt97dGGYfzgOhhi2u2QgDnV4dUz8c3oVlaPUcjsQZ5XYamWuWvSoDxRD0xHyZAd+sIMw2o2EkvqSNjTba+kAAAABwnxIYtPBgxhwwpqaQ2DiuwfJO9bbNlHyduDEbGjES5qQSGgnvjHzAkT1j3o+lNS3h3TGDSi2vh0teyR9M/3Dw</EncryptedPassword>
   </PropertyGroup>
-  <ItemGroup>
-    <EFMigrations Include="HouseShow.Repositories.AppDbContext">
-      <Value>Server=tcp:houseshow.database.windows.net,1433%3bInitial Catalog=HouseShow%3bPersist Security Info=False%3bUser ID=Cassidy%3bPassword=Applepie89%3bMultipleActiveResultSets=False%3bEncrypt=True%3bTrustServerCertificate=False%3bConnection Timeout=30%3b</Value>
-    </EFMigrations>
-  </ItemGroup>
 </Project>

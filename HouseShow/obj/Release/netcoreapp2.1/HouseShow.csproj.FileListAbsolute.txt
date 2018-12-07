@@ -31,3 +31,9 @@ C:\Users\sleeper\Desktop\CS 295N ASP.NET\repos\TermProject\HouseShow\HouseShow\o
 C:\Users\sleeper\Desktop\CS 295N ASP.NET\repos\TermProject\HouseShow\HouseShow\obj\Release\netcoreapp2.1\HouseShow.dll
 C:\Users\sleeper\Desktop\CS 295N ASP.NET\repos\TermProject\HouseShow\HouseShow\obj\Release\netcoreapp2.1\HouseShow.pdb
 C:\Users\sleeper\Desktop\CS 295N ASP.NET\repos\TermProject\HouseShow\HouseShow\obj\Release\netcoreapp2.1\HouseShow.csproj.CopyComplete
+C:\Users\sleeper\Desktop\CS 295N ASP.NET\repos\TermProject\HouseShow\HouseShow\obj\Release\netcoreapp2.1\UserSecretsAssemblyInfo.cs
+C:\Users\sleeper\Desktop\CS 295N ASP.NET\repos\TermProject\HouseShow\HouseShow\obj\Release\netcoreapp2.1\Razor\Views\Show\AddShow.g.cshtml.cs
+C:\Users\sleeper\Desktop\CS 295N ASP.NET\repos\TermProject\HouseShow\HouseShow\obj\Release\netcoreapp2.1\Razor\Views\Show\DisplayArtist.g.cshtml.cs
+C:\Users\sleeper\Desktop\CS 295N ASP.NET\repos\TermProject\HouseShow\HouseShow\obj\Release\netcoreapp2.1\Razor\Views\Show\DisplayArtists.g.cshtml.cs
+C:\Users\sleeper\Desktop\CS 295N ASP.NET\repos\TermProject\HouseShow\HouseShow\obj\Release\netcoreapp2.1\Razor\Views\Show\DisplayVenue.g.cshtml.cs
+C:\Users\sleeper\Desktop\CS 295N ASP.NET\repos\TermProject\HouseShow\HouseShow\obj\Release\netcoreapp2.1\Razor\Views\Show\DisplayVenues.g.cshtml.cs

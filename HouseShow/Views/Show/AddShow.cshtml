@@ -1,4 +1,7 @@
 ﻿@model Show;
+@{
+	ViewData["Title"] = "Add Show Details";
+}
 
 <script src="https://ajax.aspnetcdn.com/ajax/jQuery/jquery-2.2.0.min.js"></script>
 <script src="https://ajax.aspnetcdn.com/ajax/jquery.validate/1.16.0/jquery.validate.min.js"></script>
@@ -15,7 +18,7 @@
 	<div><span asp-validation-for="Cost"> </span></div>
 	<input asp-for="Cost" /><br />
 
-	<label asp-for="Description">Details</label>
+	<label asp-for="Description">Description</label>
 	<div><span asp-validation-for="Description"> </span></div>
 	<input asp-for="Description" /><br />
 

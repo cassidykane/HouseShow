@@ -65,7 +65,7 @@ using HouseShow.Models;
             WriteLiteral("<h1>House Show</h1>\r\n<h3>Search Shows</h3>\r\n\r\n");
             EndContext();
             BeginContext(102, 188, false);
-            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("form", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "bf99a92dc9384b5f816a210e8448a418", async() => {
+            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("form", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "3c60b95c5ad84309bd70115449b288c2", async() => {
                 BeginContext(122, 161, true);
                 WriteLiteral("\r\n\t<label name=\"city\">City:</label>\r\n\t<input name=\"city\" /><br />\r\n\t<label name=\"state\">State:</label>\r\n\t<input name=\"state\" /><br />\r\n\t<input type=\"submit\" />\r\n");
                 EndContext();
@@ -211,7 +211,7 @@ using HouseShow.Models;
             WriteLiteral("</th>\r\n\t\t\t\t<th>");
             EndContext();
             BeginContext(891, 84, false);
-            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "498399d17de248338ed8e5f5ad671089", async() => {
+            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "b1620fa40e2d4b2e9fb1f64459820109", async() => {
                 BeginContext(962, 9, true);
                 WriteLiteral("more info");
                 EndContext();
@@ -262,7 +262,7 @@ using HouseShow.Models;
             WriteLiteral("\r\n");
             EndContext();
             BeginContext(1026, 40, false);
-            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "e5718efc08934943b57a1a770ccac329", async() => {
+            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "7b595f134bdb4b4d8b9b1a9a3f8b517d", async() => {
                 BeginContext(1051, 11, true);
                 WriteLiteral("Post a Show");
                 EndContext();

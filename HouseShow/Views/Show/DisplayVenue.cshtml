@@ -1,7 +1,10 @@
 ﻿@model List<Show>;
+@{
+	ViewData["Title"] = ViewBag.Venue.Name;
+}
 
 <h3>@ViewBag.Venue.Name</h3>
-<p>City: @ViewBag.Venue.Address</p>
+<p>Address: @ViewBag.Venue.Address</p>
 <p>City: @ViewBag.Venue.City</p>
 <p>State: @ViewBag.Venue.State</p>
 @if (ViewBag.Venue.Website != null)

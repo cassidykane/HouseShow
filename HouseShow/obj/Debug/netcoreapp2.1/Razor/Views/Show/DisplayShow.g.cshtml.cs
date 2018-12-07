@@ -64,7 +64,7 @@ using HouseShow.Models;
             WriteLiteral("\t<p>");
             EndContext();
             BeginContext(80, 68, false);
-            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "d5636a635e0c4adc9adb716171c9368f", async() => {
+            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "9ba0e1b72e5b4e79b974a7d64e1cb9c3", async() => {
                 BeginContext(138, 6, false);
 #line 6 "C:\Users\sleeper\Desktop\CS 295N ASP.NET\repos\TermProject\HouseShow\HouseShow\Views\Show\DisplayShow.cshtml"
                                                            Write(a.Name);
@@ -111,7 +111,7 @@ using HouseShow.Models;
             WriteLiteral("\r\n<h3>Venue:</h3>\r\n<p>");
             EndContext();
             BeginContext(179, 86, false);
-            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "a099a257c4f64199846caa3cbfd6c5b1", async() => {
+            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "c09a6d7e0fcb4646af0daa9cbee0f6b5", async() => {
                 BeginContext(245, 16, false);
 #line 10 "C:\Users\sleeper\Desktop\CS 295N ASP.NET\repos\TermProject\HouseShow\HouseShow\Views\Show\DisplayShow.cshtml"
                                                                Write(Model.Venue.Name);

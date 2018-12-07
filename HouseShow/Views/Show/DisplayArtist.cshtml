@@ -1,4 +1,7 @@
 ﻿@model List<Show>;
+@{
+	ViewData["Title"] = ViewBag.Artist.Name;
+}
 
 <h3>@ViewBag.Artist.Name</h3>
 <p>City: @ViewBag.Artist.City</p>
